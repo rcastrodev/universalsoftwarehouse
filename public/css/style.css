@@ -1,0 +1,48 @@
+.tableDetalle tbody tr{
+    cursor: pointer;
+}
+.adminHome .info-box{
+    cursor: pointer;
+}
+.info-box-number{
+    text-align: right;
+    margin-right: 20px;
+    position: relative;
+    top: -10px;
+    font-size: 2.6em;
+}
+.info-box-number span{
+    margin-left: 8px;
+}
+.nroPromedio{
+    font-size: 4em;
+    font-weight: bold;
+    color: #047d49;
+}
+.content-wrapper{
+    background: #fcfdfc;
+}
+.deshabilitado{
+    opacity: .4;
+}
+.logoModal{
+    top: -15px;
+    max-width: 140px;
+    position: relative;
+}
+.navbar-bblue{
+    background-color: #051234 !important;
+}
+.pointer{
+    cursor: pointer;
+}
+.info-box:hover{
+    box-shadow: 0px 2px 14px;
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
+@media (min-width: 992px){
+    .bitacora .modal-lg{
+        max-width: 95%;
+    }
+}
