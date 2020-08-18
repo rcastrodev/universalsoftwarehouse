@@ -144,8 +144,8 @@
 @section('js')
 <script>
 $(document).ready(function() {
-
     $('.detalle').click(function(){
+        
         $('#tituloGenerico').text($(this).children('.info-box-content').children('.info-box-text').text())
     })
 
@@ -171,11 +171,6 @@ $(document).ready(function() {
             $("#contentServicios").removeClass('d-block').addClass('d-none')
         }
     })
-
-
-    //Obtener el porcentaje de agencias 
-
-
 })  
 </script>
 @stop

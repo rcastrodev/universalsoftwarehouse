@@ -73,7 +73,3 @@
         </div>
     </div>
 </div>
-@section('js')
-    <script>
-    </script>
-@endsection
