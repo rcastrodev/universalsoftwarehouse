@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index');
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::get('/admin', 'AdminController@home')->name('home');
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function(){
+    Route::get('/', 'AdminController@home')->name('home');
+    Route::get('/bitacora/get-list', 'AdminController@bitacoraGetList')->name('bitacoraGetList');
 });
 
 Auth::routes();

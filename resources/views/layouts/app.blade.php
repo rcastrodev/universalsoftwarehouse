@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta id="root_url" content="{{ config('app.url') }}">
 </head>
 <body>
     <div id="app">

@@ -111,13 +111,13 @@
                     <tr class="trDetalles" data-dismiss="modal">
                         <td>9.</td>
                         <td>000203</td>
-                        <td class="nombreAgencia" data-number="100">Agencia CIDERURAL Cuzco</td>
+                        <td class="nombreAgencia" data-number="90">Agencia CIDERURAL Cuzco</td>
                         <td>
                         <div class="progress progress-xs progress-striped active">
-                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                            <div class="progress-bar bg-warning" style="width: 90%"></div>
                         </div>
                         </td>
-                        <td><span class="badge bg-success">100%</span></td>
+                        <td><span class="badge bg-warning">90%</span></td>
                     </tr>
                     <tr class="trDetalles" data-dismiss="modal">
                         <td>10.</td>

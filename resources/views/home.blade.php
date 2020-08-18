@@ -175,29 +175,6 @@ $(document).ready(function() {
 
     //Obtener el porcentaje de agencias 
 
-    function obtenerElPorcentajePorEmpresa(){
-
-        let agenciasP = document.querySelectorAll('#table-agencias .nombreAgencia')
-        let porcentajes = []
-        let porcentajeEmpresa = 0
-
-        agenciasP.forEach(element => {
-            porcentajes.push(element.getAttribute('data-number'))
-        }) 
-
-        porcentajes.forEach(element => {
-            if(Number.isInteger(parseInt(element))){
-                porcentajeEmpresa += parseInt(element)
-            }   
-        })
-
-        document.getElementById('promedioGeneralAgencia').textContent = porcentajeEmpresa / porcentajes.length
-    }
-
-    setInterval(() => {
-        obtenerElPorcentajePorEmpresa()
-    }, 2000);
-    
 
 })  
 </script>
