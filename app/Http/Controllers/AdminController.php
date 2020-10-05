@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
     public function home(){
+        /*
         $reg = DB::connection('sqlsrv')->table('CasoUniversal')
             ->join('Cliente_Caso', 'CasoUniversal.ID_CasoUniversal', 'Cliente_Caso.ID_Caso')
             ->join('Cliente', 'Cliente_Caso.ID_Cliente', 'Cliente.ID_Cliente')
@@ -15,6 +16,7 @@ class AdminController extends Controller
             ->leftJoin('SuspenServicio', 'CasoUniversal.Suspende_Servicio', 'SuspenServicio.ID_SuspendeServ')
             ->get();
 
+        
         $reg = DB::connection('sqlsrv')->table('CasoUniversal')
             ->select('CasoUniversalCab.Numero_Caso', 
             'CasoUniversal.Serial', 
@@ -108,7 +110,7 @@ class AdminController extends Controller
             'CasoUniversal.ID_Canal')
             ->orderBy('CasoUniversalCab.Numero_Caso', 'DESC')
             ->get();
-
+            */
         return view('home');
     }
 }
