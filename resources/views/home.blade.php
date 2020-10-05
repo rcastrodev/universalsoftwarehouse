@@ -7,7 +7,7 @@
 {{-- <h1>Dashboard</h1> --}}
 <div class="row align-items-center mb-4">
     <div class="col-md-2"></div>
-    <img src="{{ asset('img/ciderural.png') }}" alt="logo" class="d-block mx-auto col-md-4 position-relative" style="top:-15px;">
+    <img src="{{ asset('img/kuriacoop.png') }}" alt="logo" class="d-block mx-auto col-md-4 position-relative" style="max-width: 200px;">
     <div class="col-md-6 nroPromedio text-center">100 <span>%</span></div>
 </div>
 
@@ -25,8 +25,10 @@
         </div>
         <!-- /.info-box -->
     </div>
+    
+    
     <!-- /.col -->
-    <div class="col-12 col-sm-6 col-md-4" data-toggle="modal" data-target=".canales">
+    <div class="col-12 col-sm-6 col-md-4 deshabilitado" {{-- data-toggle="modal" data-target=".canales" --}}>
         <div class="info-box mb-3">
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-sitemap"></i></span>
             <div class="info-box-content">
@@ -40,7 +42,7 @@
     <!-- /.col -->
     <!-- fix for small devices only -->
     <div class="clearfix hidden-md-up"></div>
-    <div class="col-12 col-sm-6 col-md-4" data-toggle="modal" data-target=".coopac">
+    <div class="col-12 col-sm-6 col-md-4 deshabilitado" {{-- data-toggle="modal" data-target=".coopac" --}}>
         <div class="info-box mb-3">
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-university"></i></span>
             <div class="info-box-content">

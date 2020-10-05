@@ -17,7 +17,7 @@
 .nroPromedio{
     font-size: 4em;
     font-weight: bold;
-    color: #047d49;
+    color: #779722;
 }
 .content-wrapper{
     background: #fcfdfc;
@@ -41,6 +41,13 @@
     transform: scale(1.05);
     transition-duration: 500ms;
 }
+.bg-warning{
+    background-color: #21507c!important;
+}
+.bg-warning i{
+    color: white;
+}
+
 @media (min-width: 992px){
     .bitacora .modal-lg{
         max-width: 95%;

@@ -2,7 +2,7 @@
 <div class="modal fade bd-example-modal-lg bitacora" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content p-5">
-            <img src="{{ asset('img/ciderural.png') }}" alt="logo" class="logoModal">
+            <img src="{{ asset('img/kuriacoop.png') }}" alt="logo" class="logoModal">
             <h4 class="text-center mb-4">Bitácora</h4>
             <form action="" class="row justify-content-between align-items-center">
                 <div class="form-group col-sm-12 col-md-2">

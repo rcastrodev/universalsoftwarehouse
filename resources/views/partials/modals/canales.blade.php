@@ -2,7 +2,7 @@
 <div class="modal fade canales" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content p-5">
-        <img src="{{ asset('img/ciderural.png') }}" alt="logo" class="logoModal">
+        <img src="{{ asset('img/kuriacoop.png') }}" alt="logo" class="logoModal">
         <div class="card">
             <div class="card-header mb-3">
                 <h3 class="card-title text-center">Canales</h3>

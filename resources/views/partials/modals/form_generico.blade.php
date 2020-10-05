@@ -2,7 +2,7 @@
 <div class="modal fade bd-example-modal-lg generico" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content p-5">
-        <img src="{{ asset('img/ciderural.png') }}" alt="logo" class="logoModal">
+        <img src="{{ asset('img/kuriacoop.png') }}" alt="logo" class="logoModal">
           <h4 class="text-center mb-4" id="tituloGenerico"></h4>
           <form action="" class="row justify-content-between align-items-center" id="form-generico">
               @csrf
