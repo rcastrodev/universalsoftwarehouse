@@ -252,9 +252,48 @@ return [
         */
         ['header' => 'Configuraciones'],
         [
-            'text' => 'CIDERURAL',
+            'text' => 'Dashboard',
             'url'  => 'admin',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-chalkboard-teacher',
+        ],
+        [
+            'text'    => 'Universal',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Crear caso',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Configuraciones',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Reporte',
+            'url'  => '#',
+            'icon' => 'far fa-folder-open',
+        ],
+        [
+            'text' => 'Informe',
+            'url'  => '#',
+            'icon' => 'far fa-file-word',
+        ],
+        [
+            'text' => 'Estadística',
+            'url'  => '#',
+            'icon' => 'fas fa-calculator',
+        ],
+        [
+            'text' => 'Gestión',
+            'url'  => 'admin/gestion',
+            'icon' => 'fas fa-users',
+        ],
+        [
+            'text' => 'Bitácora',
+            'url'  => 'admin/bitacora',
+            'icon' => 'far fa-address-book',
         ],
         /*
         [

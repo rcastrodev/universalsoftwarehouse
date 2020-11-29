@@ -1,449 +1,910 @@
-@extends('adminlte::master')
-@section('adminlte_css')
-    <link rel="icon" href="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/favicon.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/css/main.css">
-    <link rel="stylesheet" href="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/css/back.css">
-    <link rel="stylesheet" href="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/css/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-@endsection
-@section('body')
-<header>
-    <nav id="navbar">
-      <div class="nav-wrapper">
-        <div class="logo">
-          <h1>
-            <a href="/"> <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo.png" alt="">
-            </a>
-          </h1>
-        </div>
-        <ul id="menu">
-          <li class="active"><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#ofrecer">¿Qué ofrecemos?</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#beneficio">Beneficios</a></li>
-          <li><a href="#contacto">Contáctanos</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+	<!-- Start Head -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="text" content="">
+		<meta name="author" content="">
+		<!-- description -->
+    <meta name="description" content="">
+    <!-- keywords -->
+    <meta name="keywords" content="">
+		<!--Start Title -->
+		<title>UniversalSoftware House</title>
+		<!--End Title -->	
+		<!-- Start Favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="favicon.ico" type="https://templatemilk.com/templates/fini/image/x-icon">
+		<link rel="apple-touch-icon" href="https://templatemilk.com/templates/fini/images/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://templatemilk.com/templates/fini/images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://templatemilk.com/templates/fini/images/apple-touch-icon-114x114.png">
+		<!-- END Favicon -->
+		<!-- Uikit Framework -->
+		<link rel="stylesheet" href="https://templatemilk.com/templates/fini/css/uikit.min.css" />
+		<!-- Bootstrap Framework -->
+		<link rel="stylesheet" href="https://templatemilk.com/templates/fini/css/bootstrap.min.css" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://templatemilk.com/templates/fini/css/font-awesome.min.css">
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" href="https://templatemilk.com/templates/fini/css/style.css" />
+		<!-- Responsive -->
+		<link rel="stylesheet" href="https://templatemilk.com/templates/fini/css/responsive.css">
+		<!--[if lt IE 9]>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<!-- End Head -->	
+	<!-- Main Body -->
+	<body>
+		<a href="javascript:" id="return-to-top"><span data-uk-icon="icon: arrow-up; ratio: 1" class="text-gray-extra-dark"></span></a>
+		<!-- Loading Screen -->
+		<div id="loader-wrapper">
+			<!-- Loading Image -->
+			<div class="loader-img"><img src="https://templatemilk.com/templates/fini/images/loading-screen.gif" alt="" /></div>
+			<!-- END Loading Image -->
+			<!-- Loading Screen Split -->
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+			<!-- End Loading Screen Split -->	
+		</div> 
+		<!-- End Loading Screen -->
+		<!-- Homepage -->
+		<div class="uk-position-relative uk-visible-toggle" data-uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 3000">
+			<!-- Slideshow Items -->
+			<ul class="uk-slideshow-items" data-uk-height-viewport>
+				<!-- Item -->
+				<li>
+					<!-- Image -->
+					<img src="https://templatemilk.com/templates/fini/images/backgrounds/bg-01.jpg" alt="" data-uk-cover />
+					<!-- Overlay -->
+					<div class="uk-overlay-primary uk-light uk-position-cover swipe-white">
+						<!-- Overlay Content -->
+						<div class="uk-position-center-left margin-left-five-percent text-right sm-text-center">
+							<div class="width-70 xs-width-95">	
+								<!-- Heading -->
+								<h1 class="text-weight-300 uk-transition-slide-left-small sm-letter-spacing-2">Bienvenidos <span class="text-weight-700">al mejor core Financiero.</span></h1>
+								<p class="text-extra-large text-weight-300 text-gray-light uk-transition-slide-left-medium margin-bottom-40px">Todas sus soluciones de software financiero en un solo lugar.</p>
+								<!-- Button -->
+								<div class="uk-transition-slide-left">
+									<a class="btn btn-small btn-white margin-right-10px sm-margin-left-right-auto sm-display-table xs-margin-bottom-15px" href="#services">Servicios</a>
+									<a class="btn btn-small btn-blue sm-margin-left-right-auto sm-display-table xs-no-margin-bottom" href="#contact">Contacto</a>
+								</div>
+								<!-- End Button -->
+							</div>	
+						</div>
+						<!-- Overlay Content -->
+					</div>
+					<!-- End Overlay -->
+				</li>
+				<!-- End Item -->	
+			</ul>
+			<!-- End Slideshow Items -->
+			<a class="uk-position-center-left uk-position-small uk-hidden-hover text-black bg-white width-60px height-60px line-height-50 text-center border-radius-100 opacity-2 opacity-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a>
+			<a class="uk-position-center-right uk-position-small uk-hidden-hover text-black bg-white width-60px height-60px line-height-50 text-center border-radius-100 opacity-2 opacity-hover" href="#" data-uk-slidenav-next data-uk-slideshow-item="next"></a>
+		</div>
+		<!-- End Homepage -->
+		<!-- Header Light -->
+		<div class="z-index-999">			
+			<!-- Header Options -->
+			<div class="navbar-white" data-uk-sticky>
+				<!-- Header Container -->
+				<nav class="uk-navbar-container" data-uk-navbar="boundary-align: true; align: center;">				
+					<!-- Navigation Left Side -->
+					<div class="uk-navbar-left padding-left-two-percent">		
+						<!-- Logo Image -->
+						<a class="uk-navbar-item uk-logo " href="#" data-uk-scroll><img class="width-15px" src=https://templatemilk.com/templates/fini/images/logo-dark.png" alt="" /></a>
+					</div>
+					<!-- End Navigation Left Side -->
+					<!-- Navigation Right Side -->
+					<div class="uk-navbar-right uk-dark padding-right-two-percent">
+						<!-- Links -->
+						<ul class="uk-navbar-nav text-weight-600">	
+							<li>
+								<a class="uk-visible@l" href="#services" data-uk-scroll>Services</a>
+							</li>
+							<!-- Link -->
+							<li>
+								<a class="uk-visible@l" href="#projects" data-uk-scroll>Projects</a>
+							</li>
+							<li>
+								<a class="uk-visible@l" href="#contact" data-uk-scroll>Contact</a>
+							</li>
+							<!-- Link -->
+							<li>
+								<a class="uk-visible@l text-lowercase text-center" href="#"><span class="width-30px height-30px bg-blue text-white line-height-28 border-radius-100 margin-right-10px" data-uk-icon="icon: receiver; ratio: .7"></span> +1 929 3098 114</a>
+							</li>
+							<!-- Link -->
+							<li>
+								<a class="uk-visible@l text-lowercase text-center" href="mailto:contact@Fini.com"><span class="width-30px height-30px bg-blue text-white line-height-28 border-radius-100 margin-right-10px" data-uk-icon="icon: mail; ratio: .7"></span> contact@Upbiz.com</a>
+							</li>
+							<!-- Off-Canvas Navigation Toggle -->
+							<li>
+								<div class="uk-navbar-right uk-hidden@l">								
+									<a class="uk-navbar-toggle" data-uk-navbar-toggle-icon data-uk-toggle="target: #offcanvas-nav"></a>
+								</div>
+							</li>					
+							<li>
+								<a href="{{ route('login') }}" class="uk-icon-link" data-uk-icon="user" data-uk-tooltip="title: Ingresar"></a>
+							</li>
+						</ul>				
+					</div>
+					<!-- End Navigation Right Side -->				
+				</nav>
+				<!-- End Header Container -->
+			</div>
+			<!-- End Header Options -->
+		</div>
+		<!-- End Header Light -->
+		<!-- Off-Canvas Navigation -->
+		<div id="offcanvas-nav" data-uk-offcanvas="mode: push; overlay: true; esc-close: true;">
+		
+			<!-- Off-Canvas Bar -->
+			<div class="uk-offcanvas-bar menu-dark bg-black">
+				<!-- Off-Canvas Links-->
+				<ul class="uk-nav-default uk-nav-parent-icon text-left" data-uk-nav>
+					<li class="margin-top-20px"><a class="uk-navbar-item uk-logo" href="#" data-uk-scroll><img class="width-40px" src="https://templatemilk.com/templates/fini/images/logo-white.png" alt="" /></a></li>
+					<!-- Link -->
+					<li class="margin-bottom-10px">
+						<a href="#services" data-uk-scroll><span class="text-weight-400 padding-bottom-20px">Services</span></a>
+					</li>
+					<!-- End Link -->	
+					<!-- Link -->
+					<li class="margin-bottom-10px">
+						<a href="#projects" data-uk-scroll><span class="text-weight-400 padding-bottom-20px">Project</span></a>
+					</li>
+					<!-- End Link -->	
+					<!-- Link -->
+					<li class="margin-bottom-10px">
+						<a href="#contact" data-uk-scroll><span class="text-weight-400 padding-bottom-20px">Contact</span></a>
+					</li>
+					<!-- End Link -->
+					<!-- Link -->
+					<li class="margin-bottom-10px">
+						<a href="#"><span data-uk-icon="icon: receiver; ratio: 1" class="position-relative margin-right-5px text-blue"></span> +1 929 3098 114</a>
+					</li>
+					<!-- Link -->
+					<li class="margin-bottom-10px">
+						<a class="text-lowercase" href="mailto:contact@Fini.com"><span data-uk-icon="icon: mail; ratio: 1" class="position-relative margin-right-5px text-blue"></span> contact@Fini.com</a>
+					</li>
+					<li>
+						<a class="uk-navbar-toggle" href="#modal-full4" data-uk-toggle><span data-uk-icon="icon: search; ratio: 1" class="position-relative margin-right-5px text-blue"></span> Search</a>
+					</li>
+					<li>
+						<p class="no-margin-bottom text-small text-gray-light text-weight-400">Copyright © 2019 of <a href="https://www.templatemilk.com" target="_blank">templatemilk.</a></p>
+					</li>
+				</ul>
+				<!-- End Off-Canvas Links -->
+			</div>
+			<!-- End Off-Canvas Bar -->
+		</div>
+		<!-- End Off-Canvas Navigation -->
+		<!-- About -->
+		<div class="padding-top-bottom-150px">	
+			<!-- Container -->
+			<div class="container">
+				<!-- Row -->
+				<div class="row" data-uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 200">
+					<!-- Column -->
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 center-col margin-auto text-left md-text-center md-margin-bottom-100px">
+						<!-- Title -->
+						<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px">Quienes <span class="text-weight-700">Somos.</span></h3>
+						<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-25px md-margin-left-right-auto"></div>
+						<!-- Description -->
+						<p>Universal Software House Perú es una empresa fundada por socios peruanos y operamos en alianza con Universal Software House, propietaria del sistema Core Banking PARADISE. </p>
+						<p>Nuestro objetivo es brindar soluciones tecnológicas innovadoras para empresas del rubro financiero en Perú y América Latina.</p>
+					</div>
+					<!-- End Column -->
+					<!-- Column -->
+					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 center-col margin-auto text-left md-text-center md-margin-bottom-100px uk-flex uk-flex-middle">
+						<div>
+							<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px"><span class="text-weight-700">Visión.</span></h3>
+							<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-25px md-margin-left-right-auto"></div>
+							<p>Nuestra visión es llegar a ser una empresa de tecnología que genere valor a nuestros clientes y socios de negocio, convirtiéndonos en un referente tecnológico en el Sistema Financiero, basados en la innovación y siempre buscando la excelencia en la experiencia de cliente..</p>
+							<p></p>					
+						</div>
+					</div>
+					<!-- End Column -->					
+					<!-- Column -->
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 center-col margin-auto text-left md-text-center uk-flex uk-flex-middle">
+						<div>
+							<span class="margin-left-10px position-absolute top-15-percent text-blue opacity-1" data-uk-icon="icon: quote-right; ratio: 30"></span>
+							<h3 class="text-weight-300 text-black margin-top-15px no-margin-bottom line-height-medium">Mejor <br><span class="text-weight-700">Core Financiero.</span></h3>
+						</div>	
+					</div>
+					<div class="col-sm-12 col-md-4 col-xs-12 center-col margin-auto text-left md-text-center md-margin-bottom-100px uk-flex uk-flex-middle">
+						<div>
+							<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px"><span class="text-weight-700">Misión.</span></h3>
+							<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-25px md-margin-left-right-auto"></div>
+							<p>Proveer soluciones de tecnologías innovadoras, flexibles, robustas y confiables para el mercado financiero en Perú y Latino América.</p>
+							<p></p>					
+						</div>
+					</div>
+					<!-- End Column -->
+				</div>
+				<!-- End Row -->
+			</div>
+			<!-- End Container -->
+		</div>
+		<!-- End About -->
+		<!-- Services -->
+		<div id="services" class="padding-top-bottom-150px bg-gray-extra-light">
+			<!-- Container -->
+			<div class="container">
+				<!-- Row -->
+				<div class="row" data-uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 200">
+					<!-- Column -->
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center-col text-center margin-bottom-100px sm-no-margin-bottom">
+						<!-- Title -->
+						<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px sm-margin-bottom-25px">Our <span class="text-weight-700">Services.</span></h3>
+						<p class="text-blue margin-bottom-35px">It has survived not onlya galley of type and scrambled five centuries.</p>
+						<!-- Separator -->
+						<div class="separator width-10 center-col bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-25px sm-margin-bottom-50px md-margin-left-right-auto"></div>
+					</div>
+					<!-- End Column -->
+				</div>
+				<!-- End Row -->
+				<!-- Animation -->
+				<div data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > .row > div ; delay: 50; repeat: false">
+					<!-- Row -->
+					<div class="row">
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col margin-bottom-100px text-left sm-text-center">
+							<span data-uk-icon="icon: folder; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Money Management</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col margin-bottom-100px text-left sm-text-center">		
+							<span data-uk-icon="icon: receiver; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Consulting</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col margin-bottom-100px text-left sm-text-center">
+							<span data-uk-icon="icon: social; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Analytics</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col margin-bottom-100px text-left sm-text-center">
+							<span data-uk-icon="icon: move; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Markeing Tools</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+					</div>
+					<!-- End Row -->
+					<!-- Row -->
+					<div class="row">
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col text-left sm-margin-bottom-100px sm-text-center">
+							<span data-uk-icon="icon: history; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Capital Markets</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col text-left sm-margin-bottom-100px sm-text-center">
+							<span data-uk-icon="icon: search; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Finance Research</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col text-left xs-margin-bottom-100px sm-text-center">
+							<span data-uk-icon="icon: credit-card; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">Bank & Insurance</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+						<!-- Column -->
+						<div class="col-md-3 col-sm-6 col-xs-12 center-col text-left sm-text-center">
+							<span data-uk-icon="icon: happy; ratio: 2"></span>
+							<p class="margin-top-bottom-15px text-weight-700 text-gray-extra-dark text-capitalize">24/7 Support</p>
+							<p class="margin-bottom-15px">Nulla vitae elit libero elit non porta gravida eget metus cras egestas.</p>
+							<a href="#">Order Now <span data-uk-icon="icon: arrow-right; ratio: 1"></span></a>
+						</div>
+						<!-- End Column -->
+					</div>
+				</div>
+				<!-- End Animation -->
+			</div>
+			<!-- End Container -->
+		</div>
+		<!-- End Services -->		
+		<!-- Features -->
+		<div class="bg-gray-extra-light">
+			<!-- Row -->
+			<div class="row no-margin no-padding">
+				<!-- Column -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 no-margin no-padding uk-flex uk-flex-middle md-padding-top-bottom-150px md-padding-left-15px md-padding-right-15px" style="background-color: white;">
+					<!-- Container -->
+					<div class="container" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium; delay: 200">			
+						<!-- Row -->
+						<div class="row">
+							<!-- Column -->
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 center-col text-left md-text-center">
+								<!-- Title -->
+								<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px sm-margin-bottom-25px">Nuestras <span class="text-weight-700">Características.</span></h3>						
+								<!-- Separator -->
+								<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-50px md-margin-left-right-auto"></div>
+							</div>
+							<!-- End Column -->
+						</div>
+						<!-- End Row -->
+						<!-- Row -->
+						<div class="row">
+							<!-- Column -->
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 center-col text-left md-text-center">
+								<ul class="no-margin no-padding no-list-style">				
+									<li><p><span class="text-blue position-relative bottom-1" data-uk-icon="icon: triangle-right; ratio: 1"></span><strong>#1</strong> Plataforma Innovadora de Soluciones Tecnológicas </p></li>
+									<li><p><span class="text-blue position-relative bottom-1" data-uk-icon="icon: triangle-right; ratio: 1"></span> <strong>#2</strong> Mejor Core Financiero para la Banca Digital</p></li>
+									<li><p><span class="text-blue position-relative bottom-1" data-uk-icon="icon: triangle-right; ratio: 1"></span> <strong>#3</strong> Flexibilidad y Portabilidad de Herramientas 4GL</p></li>		
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- End Container -->
+				</div>
+				<!-- End Column -->
+				<!-- Column -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 center-col text-center no-margin no-padding" data-uk-scrollspy="target: > img; cls: uk-animation-slide-right-medium; delay: 200">
+					<!-- Image -->
+					<img src="https://templatemilk.com/templates/fini/images/about/02.jpg" alt="" />
+				</div>
+				<!-- End Column -->
+			</div>
+			<!-- End Row -->
+		</div>
+		<div class="bg-gray-extra-light">
+		
+			<!-- Row -->
+			<div class="row no-margin no-padding">
 
-      </div>
-    </nav>
-    <div class="menuIcon">
-      <span class="icon icon-bars"></span>
-      <span class="icon icon-bars overlay"></span>
-    </div>
-    <div class="overlay-menu">
-      <ul id="menu">
-        <li class="active"><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#ofrecer">¿Qué ofrecemos?</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#beneficio">Beneficios</a></li>
-        <li><a href="#contacto">Contáctanos</a></li>
-      </ul>
-    </div>
-  </header>
+				<!-- Column -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 center-col text-center no-margin no-padding" data-uk-scrollspy="target: > img; cls: uk-animation-slide-left-medium; delay: 200">
+
+					<!-- Image -->
+					<img src="https://templatemilk.com/templates/fini/images/about/05.jpg" alt="" />
+
+				</div>
+				<!-- End Column -->
+
+				<!-- Column -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 no-margin no-padding uk-flex uk-flex-middle md-padding-top-150px md-padding-top-bottom-150px md-padding-left-15px md-padding-right-15px bg-white">
+					
+					<!-- Container -->
+					<div class="container">
+					
+						<!-- Row -->
+						<div class="row" data-uk-scrollspy="target: > div; cls: uk-animation-slide-right-medium; delay: 200">
+			
+							<!-- Column -->
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 center-col text-left md-text-center">
+								
+								<span class="margin-left-10px position-absolute top-30-percent text-blue opacity-1" data-uk-icon="icon: question; ratio: 30"></span>
+								
+								<!-- Title -->
+								<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px sm-margin-bottom-25px">¿ Por qué <span class="text-weight-700">elegirnos</span>?</h3>								
+								<!-- Separator -->
+								<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-50px md-margin-left-right-auto"></div>
+								<div class="row">
+									<div class="col-md-12 col-sm-12 col-xs-12 margin-bottom-50px">					
+										<p class="margin-top-bottom-15px text-large text-weight-700 text-black"><span class="bg-blue text-white text-center width-40px height-40px line-height-38 border-radius-100 margin-right-15px" data-uk-icon="icon: lifesaver; ratio: 1"></span> Garantía</p>		
+										<p class="no-margin">Universal Software House ofrece total independencia entregando los fuentes del sistema, de esta forma nuestros clientes tiene la garantía para desarrollar sus propios módulos. También pueden usar nuestros servicios de desarrollo.</p>
+										
+										
+									</div>
+									<!-- End Column -->
+									
+									
+									<!-- Column -->
+									<div class="col-md-12 col-sm-12 col-xs-12 margin-bottom-50px">
+					
+										<p class="margin-top-bottom-15px text-large text-weight-700 text-black"><span class="bg-blue text-white text-center width-40px height-40px line-height-38 border-radius-100 margin-right-15px" data-uk-icon="icon: bolt; ratio: 1"></span>Lansa</p>
+										<p class="no-margin">Mayor gestión del conocimiento en TI, una sola herramienta para desarrollar productos en PC, Smartphone, Web, Web services, e integración automática con los sistemas de oficina (Word, Excel, Email, Pdf).</p>
+										<p class="no-margin">La herramienta de desarrollo LANSA, utilizada por 35 de los 100 bancos Top en el mundo. LANSA  es miembro del programa IBM Developer’s Roadmap (Miembro all-star), y miembro del programa Microsoft Midrange Application (Miembro Gold Certified).</p>
+										
+									</div>
+
+								</div>
+								<!-- End Row -->
+						
+							</div>
+							<!-- End Column -->
+						
+						</div>
+						<!-- End Row -->
+						
+					</div>
+					<!-- End Container -->
+
+				</div>
+				<!-- End Column -->
+
+			</div>
+			<!-- End Row -->
+			
+		</div>
+		<!-- End Why Choose Us -->
+		
+		
+		
+		
+		<!-- Clients -->
+		<div class="padding-top-bottom-150px image-bg-5 overlay-white-dense">
+		
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+		
+					<!-- Clients Items -->
+					<ul class="uk-child-width-1-1 uk-child-width-1-4@m uk-grid text-center" data-uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-medium; delay: 100">
+					
+						<li class="margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-09.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-10.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-11.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-12.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="sm-margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-16.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="sm-margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-13.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li class="sm-margin-bottom-50px">
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-14.png" alt="">
+								
+							</div>
+							
+						</li>
+						
+						<li>
+						
+							<div class="uk-panel">
+							
+								<img src="https://templatemilk.com/templates/fini/images/clients/client-15.png" alt="">
+								
+							</div>
+							
+						</li>
+
+					</ul>
+					<!-- End Clients Items -->
+					
+		
+			
+				</div>
+				<!-- End Row -->
+
+			</div>
+			<!-- End Container -->
+
+		</div>
+		<!-- End Clients -->		
+		<div id="contact">
+		
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Column -->
+				<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 image-bg-7 overlay-white-dense padding-top-bottom-150px md-padding-left-15px md-padding-right-15px">
+					
+					<!-- Contact Container -->
+					<div class="container contact-wrapper">
+					
+						<!-- Row -->
+						<div class="row">
+			
+							<!-- Column -->
+							<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 center-col text-left md-text-center" data-uk-scrollspy="cls:uk-animation-fade">
+							
+								<!-- Row -->
+								<div class="row" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium; delay: 200">
+								
+									<!-- Column -->
+									<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 center-col text-center margin-auto md-margin-bottom-100px">
+									
+										<!-- Row -->
+										<div class="row">
+
+											<!-- Column -->
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-bottom-75px text-center">
+												
+												<span class="bg-blue text-white width-50px height-50px line-height-48 border-radius-100" data-uk-icon="icon: receiver; ratio: 1"></span>
+
+												<p class="margin-bottom-10px margin-top-20px text-large text-black text-weight-700">Call Us</p>
+												
+												<a href="#" class="no-margin text-gray-dark">+1 929 309 8114</a>
+
+												
+											</div>
+											<!-- End Column -->
+								
+											<!-- Column -->
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-bottom-75px text-center">
+												
+												<span class="bg-blue text-white width-50px height-50px line-height-48 border-radius-100" data-uk-icon="icon: mail; ratio: 1"></span>
+
+												<p class="margin-bottom-10px margin-top-20px text-large text-black text-weight-700">Email Us</p>
+												
+												<a href="mailto:contact@archita.com" class="no-margin text-gray-dark">contact@archita.com</a>
+
+												
+											</div>
+											<!-- End Column -->
+								
+											<!-- Column -->
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+												
+												<span class="bg-blue text-white width-50px height-50px line-height-48 border-radius-100" data-uk-icon="icon: location; ratio: 1"></span>
+
+												<p class="margin-bottom-10px margin-top-20px text-large text-black text-weight-700">Our Office</p>
+												
+												<a href="#" class="no-margin text-gray-dark">7381 Branch Rd, NY 11354</a>
+
+											</div>
+											<!-- End Column -->
+										
+										</div>
+									
+									</div>
+									<!-- End Column -->
+						
+									
+									<!-- Column -->
+									<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 center-col text-center margin-auto sm-margin-bottom-75px">
+
+										<!-- Form Container -->
+										<form class="contact-form text-left" method="post" action="contact.php">
+										
+											<!-- Messages For The User -->
+											<div class="messages"></div>
+
+											<!-- Form Controls -->
+											<div class="controls">
+
+												<!-- Row -->
+												<div class="row">
+												
+													<!-- Column -->
+													<div class="col-md-6 col-sm-12 col-xs-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
+
+															<p class="text-small text-weight-400 margin-bottom-10px">Nombre *</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="text" name="name" required="required" data-error="Nombre es requerido.">
+
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+														
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
+													
+										
+													<!-- Column -->
+													<div class="col-md-6">
+													
+														<!-- Form Group -->
+														<div class="form-group">
+														
+															<p class="text-small text-weight-400 margin-bottom-10px">Apellido *</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="text" name="name" required="required" data-error="Apellido es requerido.">
+
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+															
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
+
+												</div>
+												<!-- End Row -->	
 
 
+												
+												<!-- Row -->
+												<div class="row">
+												
+													<!-- Column -->
+													<div class="col-md-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
 
-<section class="banner_home">
-    <div class="owl-carousel owl-theme owl-banner_principal" >
-      <div class="item" style="background-image: url('https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/banner1.jpg')">
-        <div class="tapar"></div>
-        <div class="container">
-          <h2> <span> #1</span> Plataforma Innovadora de Soluciones Tecnológicas</h2>
-        </div>
-      </div>
-      <div class="item" style="background-image: url('https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/banner3.jpg')">
-        <div class="tapar"></div>
-        <div class="container">
-          <h2> <span> #2</span> Mejor Core Financiero para la Banca Digital</h2>
-        </div>
-      </div>
-      <div class="item" style="background-image: url('https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/banner2.jpg')">
-        <div class="tapar"></div>
-        <div class="container">
-          <h2> <span> #3</span> Flexibilidad y Portabilidad de Herramientas 4GL</h2>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="dots_p owl-dots">
-        <button role="button" class="owl-dot">
-          <div class="loader desaparecer">
-            <div></div>
-            <h3>Plataforma <br>innovadora <span>#1</span> </h3>
-            <div class="line"></div>
-            <div class="subline inc"></div>
-          </div>
-          <div class="dot_home aparecer"></div>
-        </button>
-        <button role="button" class="owl-dot"> 
-          <div class="loader desaparecer">
-            <h3>Mejor Core  <br>Financiero <span>#2</span> </h3>
-            <div class="line"></div>
-            <div class="subline inc"></div>
-          </div>
-          <div class="dot_home aparecer"></div>
-        </button>
-        <button role="button" class="owl-dot"> 
-          <div class="loader desaparecer">
-            <h3>Flexibilidad y <br> Portabilidad <span>#3</span> </h3>
-            <div class="line"></div>
-            <div class="subline inc"></div>
-          </div>
-          <div class="dot_home aparecer"></div>
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class="quienes_somos" id="nosotros">
-    <div class="container">
-      <div class="quienes">
-                  
-        <div class="mitad">
-         <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_color.png" class="logo_color aparecer">
-          <h2>Quiénes somos</h2>
-          <p>Universal Software House Perú es una empresa fundada por socios peruanos y operamos en alianza con Universal Software House, propietaria del sistema Core Banking PARADISE. </p>
-          <p>Nuestro objetivo es brindar soluciones tecnológicas innovadoras para empresas del rubro financiero en Perú y América Latina.</p>
-          <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_color.png" class="logo_color desaparecer" >
-        </div>
-        <div class="mitad">
-          <h3>Visión</h3>
-          <p>Nuestra visión es llegar a ser una empresa de tecnología que genere valor a nuestros clientes y socios de negocio, convirtiéndonos en un referente tecnológico en el Sistema Financiero, basados en la innovación y siempre buscando la excelencia en la experiencia de cliente..</p>
-          <h3>Misión</h3>
-          <p>Proveer soluciones de tecnologías innovadoras, flexibles, robustas y confiables para el mercado financiero en Perú y Latino América.</p>
-        </div>
-      </div>
-      <div class="video" style="background-image: url(https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/video.jpg);">
-        <!-- <a href="#" class="open_modal"> <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/play.png" alt="" class="play"></a> -->
-      </div>
-    </div>
-  </section>
-  <section class="soluciones" id="ofrecer" style="background-image: url('https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/freelance.jpg')">
-    <div class="tapar"></div>
-    <div class="container">
-      <h2>Las Mejores Soluciones Tecnológicas</h2>
-    </div>
-      <div class="owl-carousel owl-theme owl-soluciones">
-        <div class="item">
-          <div class="titulo">
-            <h3> <span>#1</span> Core Banking “Reloaded”</h3>
-          </div>
-          <div class="info">
-            <p>La empresa nace heredando los clientes de SIAF que representa uno de los core banking más completos y robustos, el equipo de Universal Software House toma la base de este Core y lo reformula con una herramienta de 4GL que permite brindar los mejor de ambos mundos, un sistema completo, robusto pero con la flexibilidad y agilidad de las herramientas modernas, por esa razón lo llamamos SIAF “reloaded”.</p>
-          </div>
-        </div>
+															<p class="text-small text-weight-400 margin-bottom-10px">E-mail Address *</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="email" name="email" placeholder="i.e. jason@statham.com" required="required" data-error="Valid email is required.">
+															
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+														
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
+													
+													
+												  
+													<!-- Column -->
+													<div class="col-md-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
 
-        <div class="item">
-          <div class="titulo">
-            <h3> <span>#2</span>Definición de Productos Wizard Amigable</h3>
-          </div>
-          <div class="info">
-            <p>Esta característica única en PARADISE permite rápidamente generar nuevos productos, dejando de lado los productos rígidos de difícil adaptación a nuevos cambios donde la intervención de TI es importante, con PARADISE los usuarios definen sus productos fácil y rápidamente.</p>
-          </div>
-        </div>
+															<p class="text-small text-weight-400 margin-bottom-10px">Teléfono</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="tel" name="phone">
+															
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+															
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
 
-        <div class="item">
-          <div class="titulo">
-            <h3> <span>#3</span>Gestor de Cobranzas Automático </h3>
-          </div>
-          <div class="info">
-            <p>Gestor automático las 24 horas alerta a las acreditaciones en las cuentas del cliente para cobrar toda deuda que mantenga el cliente con la institución sea desde una cuota de crédito a una simple comisión.</p>
-          </div>
-        </div>
+													<!-- Column -->
+													<div class="col-md-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
 
-        <div class="item">
-          <div class="titulo">
-            <h3> <span>#4</span> Flexible y Paramétrico 4GL</h3>
-          </div>
-          <div class="info">
-            <p>En la construcción de PARADISE se usó LANSA, una herramienta 4GL que permite tener una independencia de bases de datos, independencia de plataformas, etc. haciéndolo  portable a cualquier institución financiera.</p>
-          </div>
-        </div>
+															<p class="text-small text-weight-400 margin-bottom-10px">Email</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="email" name="email">
+															
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+															
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
 
-        <div class="item">
-          <div class="titulo">
-            <h3> <span>#5</span> Core Financiero para la Banca Digital</h3>
-          </div>
-          <div class="info">
-            <p>PARADISE tiene en su concepción una Arquitectura de microservicios orientada a la Banca Digital, un diseño totalmente paramétrico que lo hace muy flexible.</p>
-          </div>
-        </div>
-      </div>
+													<!-- Column -->
+													<div class="col-md-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
 
-  </section>
-  <section class="productos" id="productos">
-    <div class="">
-      <div class="lansa">
-        <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/paradise.png" alt="">
-      </div>
-      <div class="paradise">
-        <h3>Paradise Financial Suite</h3>
-        <p>Es una herramienta de Core Banking que integra una gama de productos bancarios y microfinancieros con características únicas, desarrollado por nuestra empresa en una plataforma Word Class de cuarta generación.</p>
-      </div>
-      <div class="modulos">
-        <ul class="accordion">
-          <li class="accordion__item">
-            <a class="accordion__title" href="javascript:void(0)">Modulos financieros <i class="fas fa-chevron-up"></i> <i class="fas fa-chevron-down"></i></a>
-            <div class="accordion__content">
-              <ul>
-                <li>Módulo de Clientes</li>
-                <li>Cuentas Personales
-                  <!-- <ul>
-                    <li>Cuentas Corrientes</li>
-                    <li>Cuentas de Ahorros</li>
-                    <li>Depósitos a Plazo Fijo</li>
-                    <li>Tarjetas de débito</li>
-                  </ul> -->
-                </li>
-                <li>Líneas de Crédito </li>
-                <li>Garantía</li>
-                <li>Créditos 
-                  <!-- <ul>
-                    <li>Préstamos</li>
-                    <li>Tarjetas de Crédito</li>
-                    <li>Factoring</li>
-                    <li>Leasing</li>
-                    <li>Fianzas</li>
-                  </ul> -->
-                </li>
-                <li>Mesa de Dinero</li>
-                <li>Comercio Exterior</li>
-                <li>Contabilidad </li>
-                <li>Cajas</li>
-                <li>Valores</li>
-                <li>Fideicomiso</li>
-                <li>Impuestos</li>
-                <li>Canales</li>
-                <!-- <li>
-                  <ul>
-                    <li>Atm’s</li>
-                    <li>IVR’s</li>
-                    <li>Wireless device</li>
-                    <li>Dispositivos móvil</li>
-                    <li>Web</li>
-                    <li>Web services</li>
-                    <li>Manejo de Mensajeria</li>
-                    <li>ISO8583</li>
-                  </ul>
-                </li> -->
-              </ul>
-            </div>
-          </li>
-          <li class="accordion__item">
-            <a class="accordion__title" href="javascript:void(0)">Funcionalidad <i class="fas fa-chevron-up"></i> <i class="fas fa-chevron-down"></i></a>
-            <div class="accordion__content">
-              <ul>
-                <li>Multiempresa</li>
-                <li>Multimoneda</li>
-                <li>Multilenguaje</li>
-                <li>Paramétrico</li>
-                <li>Autorizaciones Centralizadas</li>
-                <li>Control de Acceso a Canales</li>
-                <li>Operación OFF-LINE</li>
-                <li>Seguridad en todos los Niveles</li>
-                <li>Manejo de Imágenes</li>
-                <li>Ayuda en Línea</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="lansa blanco">
-        <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/financial.png" alt="">
-      </div>
-      <div class="financial">
-        <h3>Financial Suitecoop By Paradise</h3>
-        <p>Es la solución de PARADISE para el mercado Cooperativo que integra una gama de productos financieros con las características propias de las COOPAC, brindándole además a sus socios los canales de acceso digital como Web y Smartphone.</p>
-        <p>FINANCIAL SUITECOOP cuenta con la gama completa de la solución para el mercado financiero además de los siguientes módulos únicos del sistema cooperativo:</p>
-        <ul>
-          <li>Gestión de socios</li>
-          <li>Cuenta de aportes</li>
-        </ul>
-        <p>FINANCIAL SUITECOOP es el único producto financiero en el mercado latinoamericano desarrollado en su totalidad sobre una herramienta de 4GL, LANSA.</p>
-      </div>
-      <div class="img_financial" style="background-image: url(https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/financial.jpg);">
-        <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/financial2.jpg" alt="">
-      </div>
-    </div>
-  </section>
-  <section class="beneficios" id="beneficio">
-    <div class="container">
-      <div class="info">
-        <h2>Beneficios Técnicos</h2>
-        <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/lansa.png" alt="">
-<!--         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et</p> -->
-      </div>
-      <div class="beneficio">
-        <div class="owl-carousel owl-theme owl-beneficio">
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/beneficio1.jpg" alt="">
-            <div class="info">
-              <h3> <span>#1</span>Garantía</h3>
-              <div class="hover">
-                <p>Universal Software House ofrece total independencia entregando los fuentes del sistema, de esta forma nuestros clientes tiene la garantía para desarrollar sus propios módulos. También pueden usar nuestros servicios de desarrollo.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/beneficio2.jpg" alt="" >
-            <div class="info">
-              <h3> <span>#2</span>Lansa</h3>
-              <div class="hover">
-                <p>Mayor gestión del conocimiento en TI, una sola herramienta para desarrollar productos en PC, Smartphone, Web, Web services, e integración automática con los sistemas de oficina (Word, Excel, Email, Pdf).</p>
-                <p>La herramienta de desarrollo LANSA, utilizada por 35 de los 100 bancos Top en el mundo. LANSA  es miembro del programa IBM Developer’s Roadmap (Miembro all-star), y miembro del programa Microsoft Midrange Application (Miembro Gold Certified).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="soluciones_servicios">
-    <div class="container">
-      <div class="columnas3">
-        <h2>Soluciones y Servicios</h2>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p> -->
-      </div>
-      <div class="columnas3">
-        <h3>#1 Solución en Renting del Core Banking</h3>
-        <p>En las entidades financieras, la decisión del uso de un determinado Core Transaccional es uno de los pasos en el crecimiento de toda institución, que requiere la mayor inversión en temas tecnológicos.</p> <p>Por esta razón y con el objetivo de  mitigar el impacto financiero de estas decisiones, Universal Software House Perú provee la solución de Core Banking como un servicio, es decir la entidad financiera no necesitara invertir en costosos activos para tener una solución World Class, a través de una renta mensual se podrá acceder a cualquiera de nuestra soluciones de Core Transaccional.</p>
-      </div>
-      <div class="columnas3">
-        <h3>#2 Solución como un servicio Core Banking on Demand</h3>
-        <p>En adición a la solución en renta de cualquiera de nuestras versiones de Core Transaccional, ofrecemos a nuestros clientes el hosting de la solución en una de las plataformas más robustas del mercado. </p>
-      </div>
-    </div>
-  </section>
-  <section class="marcas" style="background-image: url('https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/marcas.jpg')">
-    <div class="container">
-      <div class="texto">
-        <h3> <span>#Aliados</span> Marcas que confían en nosotros</h3>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p> -->
-      </div>
-      <div class="slider">
-        <div class="owl-carousel owl-theme owl-marcas">
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_kuria.png" alt="">
-          </div>
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_bonga.png" alt="">
-          </div>
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_bonga2.png" alt="">
-          </div>
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_bonga3.png" alt="">
-          </div>
-          <div class="item">
-            <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo_bonga4.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="contacto" id="contacto">
-    <div class="container">
-      <div class="titulo">
-        <h3>Contáctate con nosotros</h3>
-        <p>Complete sus datos y uno de nuestros asesores se contactará con usted en breve.</p>
-      </div>
-      <form class="" action="#" id="form-contactanos" method="post">
-        <div class="columnas3">
-          <input type="text" name="nombres" id="nombres"  placeholder="Nombres*"  onkeyup="this.value=this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ ]/g,'')">
-        </div>
-        <div class="columnas3">
-          <input type="text" name="apellidos" id="apellidos"  placeholder="Apellidos*"  onkeyup="this.value=this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ ]/g,'')">
-        </div>
-        <div class="columnas3">
-          <input type="text" name="telefono" id="telefono"  placeholder="Telefono*" oninput="this.value = this.value.replace(/[^0-9+]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-        </div>
-        <div class="columnas3">
-          <input type="email" name="email" id="email" placeholder="Correo electrónico*">
-        </div>
-        <div class="columnas3">
-          <input type="text" name="cargo" id="cargo"  placeholder="Cargo*">
-        </div>
-        <div class="columnas3">
-          <input type="text" name="empresa" id="empresa"  placeholder="Empresa*">
-        </div>
-        <textarea name="mensaje"  id="mensaje" rows="8" cols="80" placeholder="Mensaje"></textarea>
-        <div class="terminos">
-          <p>Campos Obligatorios*</p>
-          <div class="checkbox">
-            <input type="checkbox" class="input-assumpte" id="terminos" />
-            <label for="terminos"></label>
-          </div>
-          <span class="checkmark"></span>
-          <label for="" class="acepto-terminos"> Acepto los <a href="#" class="modal_terminos"> Términos y condiciones y Políticas de privacidad </a>de tratamientos de mis datos.</label>
-        </div>
-        <div class="submit">
-        <input type="submit" name="" value="Enviar" id="enviarFormContactenos" onclick="registroContactanos('#form-contactanos')">
-          <!-- utm -->
-          <input type="hidden" name="utm_medium" id="utm_medium" value="">
-          <input type="hidden" name="utm_source" id="utm_source" value="">
-          <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
-          <input type="hidden" name="utm_content" id="utm_content" value="">
-          <input type="hidden" name="utm_term" id="utm_term" value="">
-          <input type="hidden" id="template_url" value="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria"> 
-          <input type="hidden" name="formulario" id="formulario" value="contactenos">
-        </div>
-      </form>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <!-- <div class="logo_f">
-        <img src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/images/logo.png" alt="">
-      </div>
-      <div class="menu2">
-        <ul>
-          <li>Nosotros</li>
-          <li>¿Qué ofrecemos?</li>
-          <li>Productos</li>
-          <li>Beneficios</li>
-        </ul>
-      </div> -->
-      <div class="redes">
-        <ul>
-          <a href="https://www.facebook.com/ush.per.5" target="_blank"><li><i class="fab fa-facebook-f"></i></li></a>
-          <a href="https://www.linkedin.com/company/ushperu/about/" target="_blank"><li><i class="fab fa-linkedin-in"></i></li></a>
-          <!-- <a href="" target="_blank"><li><i class="fab fa-twitter"></i></li></a> -->
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <!-- <div class="modal_video video-popup">
-    <div class="container_video">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/BqkIMdHWnds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <a href="#" class="close">X</a>
-    </div>
-  </div> -->
+															<p class="text-small text-weight-400 margin-bottom-10px">Cargo</p>
+															
+															<!-- Input -->
+															<input class="form-control form_name no-margin-top padding-30px text-small bg-transparent text-gray-extra-dark text-weight-400 roboto border-color-gray-extra-light" type="text" name="cargo">
+															
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+															
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
+												</div>
+												<!-- End Row -->	
+												<!-- Row -->
+												<div class="row">
+												
+													<!-- Column -->
+													<div class="col-md-12">
+													
+														<!-- Form Group -->
+														<div class="form-group">
+															
+															<p class="text-small text-weight-400 margin-bottom-10px">Your Messages *</p>
+															
+															<!-- Input -->
+															<textarea class="form-control form_message no-margin-top padding-30px bg-transparent text-small text-gray-extra-dark text-weight-400 roboto border-color-gray-extra0light" name="message"></textarea>
+															
+															<!-- Error Block -->
+															<div class="help-block with-errors"></div>
+															
+														</div>
+														<!-- End Form Group -->
+														
+													</div>
+													<!-- End Column -->
+												  
+												  
+													<!-- Column -->
+													<div class="col-md-12 text-center">
 
-  <div class="modal_video modal_terminos_abrir">
-    <div class="container_video">
-      <h3> Términos y condiciones </h3>
-      <p>La información y datos que nos proporcione voluntariamente a través del sitio web se incluirán en una base de datos que quedará bajo la responsabilidad de USHP, con el objetivo de proporcionarle un servicio personalizado y a la altura de sus necesidades, mejorando el canal de comunicación con el usuario.
-	La aceptación de estos Términos y Condiciones, implica que Ud. presta su consentimiento libre, previo, informado, expreso e inequívoco para la inclusión, uso y tratamiento de sus datos personales por USHP. USHP realizará el tratamiento de sus datos personales de acuerdo con lo establecido por la Ley N° 29733 “Ley de Protección de Datos Personales” y su Reglamento, aprobado mediante Decreto Supremo 003-2013/JUS. Se informa que los datos recopilados se utilizarán para contactarse y enviar información mediante cualquier medio y soporte sobre nuestros productos, promociones, el seguimiento de un eventual proceso de inscripción, encuestas de satisfacción, fines administrativos y estadísticos, entre otros similares. USHP garantiza que toda la información proporcionada será guardada bajo estricta confidencialidad y su uso será para el cumplimiento de los fines antes detallados. El usuario, en cualquier circunstancia, podrá revocar la autorización o modificar sus datos escribiendo al correo electrónico <a href="mailto:info@universalsoftwarehouse.com.pe" style="color:#051234">info@universalsoftwarehouse.com.pe</a>.</p>
-      <a href="#" class="close">X</a>
-    </div>
-  </div>
+														<!-- Input -->
+														<input type="submit" class="btn-send btn btn-small btn-blue sm-margin-left-right-auto sm-display-table" value="Send Message">
+														
+													</div>
+													<!-- End Column -->
+													
+												</div>
+												<!-- End Row -->
+												
+											</div>
+											<!-- End Form Controls -->
+											
+										</form>
+										<!-- End Form Container -->
+										
+									</div>
+									<!-- End Column -->
+									
+								</div>
+								<!-- End Row -->
+								
+							</div>
+							<!-- End Column -->
+							
+						</div>
+						<!-- End Row -->
+						
+					</div>
+					<!-- End Contact Container -->
 
-  <div class="modal_video modal_politicas_abrir">
-    <div class="container_video">
-      <h3>Políticas de privacidad </h3>
-      <p>Protección de Datos Personales
+				</div>
+				<!-- End Column -->
+				
+				
+				<!-- Column -->
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 center-col bg-gray-extra-light text-left uk-flex uk-flex-middle md-padding-top-bottom-150px">
+				
+					<!-- Container -->
+					<div class="container">
+					
+						<!-- Row -->
+						<div class="row" data-uk-scrollspy="target: > div; cls: uk-animation-slide-right-medium; delay: 200">
+			
+							<!-- Column -->
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 center-col text-left md-text-center">
+								
+								<span class="margin-left-10px position-absolute top-10-percent text-blue opacity-1" data-uk-icon="icon: commenting; ratio: 30"></span>
+								
+								<!-- Title -->
+								<h3 class="text-weight-300 text-black text-capitalize margin-bottom-15px sm-margin-bottom-25px">Contáctate con <br><span class="text-weight-700">nosotros</span> </h3>								
+								<!-- Separator -->
+								<div class="separator width-10 bottom-border border-1px border-color-gray-light margin-top-25px margin-bottom-25px sm-margin-bottom-50px md-margin-left-right-auto"></div>
+					
+								<p class="no-margin-bottom text-gray-extra-dark">Complete sus datos y uno de nuestros asesores se contactará con usted en breve.</p>
+								
+							</div>
+							<!-- End Column -->
+							
+						</div>
+						<!-- End Row -->
+						
+					</div>
+					<!-- End Container -->
+					
+				</div>
+				<!-- End Column -->
 
-La información y datos que nos proporcione voluntariamente a través del sitio web se incluirán en una base de datos que quedará bajo la responsabilidad de USHP, con el objetivo de proporcionarle un servicio personalizado y a la altura de sus necesidades, mejorando el canal de comunicación con el usuario.
-La aceptación de estos Términos y Condiciones, implica que Ud. presta su consentimiento expreso, libre e informado para la inclusión, uso y tratamiento de sus datos personales por USHP. USHP realizará el tratamiento de sus datos personales en un todo de acuerdo con las disposiciones de la Ley 25.326 sobre Protección de los Datos Personales y demás normas vigentes en la materia, adoptando los recaudos técnicos y organizativos necesarios en lo que respecta a la custodia, almacenamiento, conservación y confidencialidad de la información con el fin de evitar su alteración, pérdida, tratamiento o acceso no autorizado. Debido a que ninguna transmisión vía Internet puede garantizar su íntegra seguridad, USHP no puede garantizar que la información transmitida a través del sitio web se encuentra completamente segura, con lo cual Ud. asume este riesgo que declara conocer y aceptar. Sus datos personales podrán ser compartidos con filiales y/o empresas vinculadas o contratadas de USHP., con el fin de poder ofrecerle las prestaciones de este sitio web y cumplir con los presentes Términos y Condiciones, para lo cual Ud. presta su expreso consentimiento y autorización. Los usuarios tienen derecho a acceder a sus datos personales en forma gratuita a intervalos no inferiores a seis (6) meses, salvo que se acredite interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley 25.326 (Disposición 10/2008, artículo 1°, B.O. 18/09/2008), así como a solicitar que sus datos sean rectificados, actualizados o removidos de las bases de datos de USH. Se le hace saber que la Dirección Nacional de Protección de Datos Personales, órgano de control de la ley 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales.</p>
-      <a href="#" class="close">X</a>
-    </div>
-  </div>
-  @section('adminlte_js')
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/js/owl.carousel.min.js"></script>
-    <script src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/js/masonry.min.js"></script>
-    <script src='https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js'></script>
-    <script src='https://cdn.rawgit.com/digistate/resouces/master/multipleFilterMasonry.js'></script>
-    <script src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/js/jquery.validate.min.js"></script>
-    <script src="https://universalsoftwarehouse.com.pe/wp-content/themes/kuria/js/main.js"></script>   
-  @endsection
-@endsection
+			</div>
+			<!-- End Row -->
+			
+		</div>
+		<!-- End Contact -->		
+		
+		<!-- jQuery Library -->
+		<script src="https://templatemilk.com/templates/fini/js/jquery.min.js"></script>
+		
+		<!-- Uikit Framework -->
+		<script src="https://templatemilk.com/templates/fini/js/uikit.min.js"></script>
+		
+		<!-- Uikit Icons -->
+		<script src="https://templatemilk.com/templates/fini/js/uikit-icons.min.js"></script>
+		
+		<!-- Bootstrap Framework -->
+		<script src="https://templatemilk.com/templates/fini/js/bootstrap.min.js"></script>
+		
+		<!-- Modernizr -->
+		<script src="https://templatemilk.com/templates/fini/js/modernizr.js"></script>
+		
+		<!-- Easing -->
+		<script src="https://templatemilk.com/templates/fini/js/jquery.easing.1.3.js"></script>
+
+		<!-- Font Awesome -->
+		<script src="https://templatemilk.com/templates/fini/js/font-awesome.min.js"></script>
+		
+		<!-- Pie Charts -->
+		<script src="https://templatemilk.com/templates/fini/js/jquery.easypiechart.min.js"></script>
+		
+		<!-- Contact Form Validation -->
+		<script src="https://templatemilk.com/templates/fini/js/contact.js"></script>
+		
+		<!-- Counter -->
+		<script src="https://templatemilk.com/templates/fini/js/jquery.countTo.js"></script>
+		
+		<!-- Counter Loader -->
+		<script src="https://templatemilk.com/templates/fini/js/jquery.appear.js"></script>
+		
+		<!-- Retina Ready -->
+		<script src="https://templatemilk.com/templates/fini/js/retina.min.js"></script>
+
+		<!-- Custom Scripts -->
+		<script src="https://templatemilk.com/templates/fini/js/custom.js"></script>
+	
+	</body>
+
+</html>

@@ -10,12 +10,11 @@
     <img src="{{ asset('img/kuriacoop.png') }}" alt="logo" class="d-block mx-auto col-md-4 position-relative" style="max-width: 200px;">
     <div class="col-md-6 nroPromedio text-center">100 <span>%</span></div>
 </div>
-
 @stop
 @section('content')
 <div class="row adminHome">
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box" data-toggle="modal" data-target=".detallesAgencias">
+    <a href="{{ route('agencia.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box" {{-- data-toggle="modal" data-target=".detallesAgencias" --}}>
             <span class="info-box-icon bg-warning elevation-1"><i class="far fa-building"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">AGENCIA </span>
@@ -24,7 +23,7 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     
     
     <!-- /.col -->
@@ -53,8 +52,8 @@
         </div>
         <!-- /.info-box -->
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box detalle" data-toggle="modal" data-target=".generico">
+    <a href="{{ route('web.index') }}" class="col-12 col-sm-6 col-md-4"> 
+        <div class="info-box detalle" {{-- data-toggle="modal" data-target=".generico" --}}>
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-desktop"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">WEB</span>
@@ -63,10 +62,11 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     <!-- /.col -->
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box mb-3 detalle" data-toggle="modal" data-target=".generico">
+    
+    <a href="{{ route('credito.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box mb-3 detalle" {{-- data-toggle="modal" data-target=".generico" --}}>
             <span class="info-box-icon bg-warning elevation-1"><i class="far fa-credit-card"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">CREDITOS</span>
@@ -75,23 +75,24 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     <!-- /.col -->
     <!-- fix for small devices only -->
     <div class="clearfix hidden-md-up"></div>
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box mb-3 detalle" data-toggle="modal" data-target=".generico">
+    <a href="{{ route('inversion.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box mb-3 detalle" {{-- data-toggle="modal" data-target=".generico" --}}
+        >
             <span class="info-box-icon bg-warning elevation-1"><i class="far fa-folder-open"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">DPF</span>
+                <span class="info-box-text">Inversiones - DPF</span>
                 <span class="info-box-number">100<small>%</small></span>
             </div>
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box detalle" data-toggle="modal" data-target=".generico">
+    </a>
+    <a href="{{ route('cuenta.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box detalle" {{-- data-toggle="modal" data-target=".generico" --}}>
             <span class="info-box-icon bg-warning elevation-1"><i class="far fa-address-card"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">CUENTAS</span>
@@ -100,10 +101,11 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     <!-- /.col -->
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box mb-3 detalle" data-toggle="modal" data-target=".generico">
+    <a href="{{ route('crm.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box mb-3 detalle" {{-- data-toggle="modal" data-target=".generico" --}}
+        >
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">CRM</span>
@@ -112,12 +114,13 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     <!-- /.col -->
     <!-- fix for small devices only -->
     <div class="clearfix hidden-md-up"></div>
-    <div class="col-12 col-sm-6 col-md-4">
-        <div class="info-box mb-3 detalle" data-toggle="modal" data-target=".generico">
+    <a href="{{ route('contabilidad.index') }}" class="col-12 col-sm-6 col-md-4">
+        <div class="info-box mb-3 detalle" {{-- data-toggle="modal" data-target=".generico" --}}
+        >
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-calculator"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">CONTABILIDAD</span>
@@ -126,28 +129,20 @@
             <!-- /.info-box-content -->
         </div>
         <!-- /.info-box -->
-    </div>
+    </a>
     <!-- /.col -->
   </div>
   <div class="text-right">
         <button type="button" class="btn btn-info btnTriggerAgencia d-none" data-toggle="modal" data-target=".generico">generico</button>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target=".gestion">Gestión</button>
-        <button type="button" class="btn btn-info" id="masDetalles" data-toggle="modal" data-target=".bitacora">Bitácora</button>
   </div>
-
-  @include('partials.modals.gestion')
-  @include('partials.modals.agencias')
   @include('partials.modals.form_generico')
-  @include('partials.modals.bitacora')
   @include('partials.modals.canales')
   @include('partials.modals.coopac')
-
 @stop
 @section('js')
 <script>
 $(document).ready(function() {
     $('.detalle').click(function(){
-        
         $('#tituloGenerico').text($(this).children('.info-box-content').children('.info-box-text').text())
     })
 

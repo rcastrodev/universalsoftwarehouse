@@ -47,9 +47,14 @@
 .bg-warning i{
     color: white;
 }
-
+#gestion .modal-dialog{
+    min-width: 60%;
+}
+.cke_contents{
+    max-height: 80px;
+}
 @media (min-width: 992px){
-    .bitacora .modal-lg{
+    .bitacora .modal-lg, .gestion .modal-lg{
         max-width: 95%;
     }
 }
