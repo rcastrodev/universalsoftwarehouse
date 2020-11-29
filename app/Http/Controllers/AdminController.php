@@ -6,12 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Yajra\Datatables\Datatables;
 use App\Bitacora;
-use App\Casos;
 use App\CasosWeb;
+use App\Casos;
 
 class AdminController extends Controller
 {
     public function home(){
+        $registros = CasosWeb::all();
+        $casos = CasosWeb::all();
+        return view('home', compact('casos'));
+    }
+
+    public function bitacoraGetList(){
+        $query = CasosWeb::where('Referencia', 'MANTENIMIENTO');
+        return Datatables::of($query)->toJson();
+    }
+
+    public function actualizarCasos(){
         $registros = Casos::all();
         foreach ($registros as $registro) {
             CasosWeb::insert([
@@ -34,6 +45,7 @@ class AdminController extends Controller
                 'FechaHora_Creacion' => $registro->FechaHora_Creacion,
                 'SuspendeServ' => $registro->SuspendeServ,
                 'DescripcionSeveridad' => $registro->DescripcionSeveridad,
+                'NumeroUSHP' => $registro->NumeroUSHP,
                 'FechaHora_Cerrado' => $registro->FechaHora_Cerrado,
                 'Activo' => $registro->Activo,
                 'Prioridad' => $registro->Prioridad,
@@ -42,12 +54,5 @@ class AdminController extends Controller
                 'CodigoAgencia' => $registro->CodigoAgencia,    
             ]);
         } 
-        $casos = DB::connection('sqlsrv')->table('CasoUniversalWeb')->get();
-        return view('home', compact('casos'));
-    }
-
-    public function bitacoraGetList(){
-        $query = DB::connection('sqlsrv')->table('CasoUniversalWeb')->where('Referencia', 'MANTENIMIENTO');
-        return Datatables::of($query)->toJson();
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
-use App\Casos;
+use App\CasosWeb;
 
 class AgenciasController extends Controller
 {
@@ -48,7 +48,7 @@ class AgenciasController extends Controller
     public function show($id)
     {
         $id = $id;
-        $agencia = Casos::where('CodigoAgencia', $id)->first();
+        $agencia = CasosWeb::where('CodigoAgencia', $id)->first();
         return view('agencia.show', compact('id', 'agencia'));
     }
 
@@ -87,7 +87,7 @@ class AgenciasController extends Controller
     }
 
     public function getListAgency($id){
-        $query = Casos::where('CodigoAgencia', $id)->where('Modulo', 'AGENCIAS');
+        $query = CasosWeb::where('CodigoAgencia', $id)->where('Modulo', 'AGENCIAS');
         return Datatables::of($query)
             ->editColumn('Numero_Caso', function($CasoUniversalWeb){
                 return "<a href='/admin/agencia/detalle/".$CasoUniversalWeb->Numero_Caso."'>$CasoUniversalWeb->Numero_Caso</a>";
@@ -97,7 +97,7 @@ class AgenciasController extends Controller
     }
 
     public function caseNumber($caseNumber){
-        $items = Casos::where('Numero_Caso', $caseNumber)->first();
+        $items = CasosWeb::where('Numero_Caso', $caseNumber)->first();
         return view('agencia.details', compact('items'));
     }
 }

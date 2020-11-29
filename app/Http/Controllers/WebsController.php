@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
-use App\Casos;
+use App\CasosWeb;
 
 class WebsController extends Controller
 {
@@ -47,7 +47,7 @@ class WebsController extends Controller
      */
     public function show($id)
     {
-        $items = Casos::where('Numero_Caso', $id)->first();
+        $items = CasosWeb::where('Numero_Caso', $id)->first();
         return view('web.show', compact('items'));
     }
 
@@ -86,7 +86,7 @@ class WebsController extends Controller
     }
 
     public function getList(){
-        $query = Casos::where('Modulo', 'WEB');
+        $query = CasosWeb::where('Modulo', 'WEB');
         return Datatables::of($query)
             ->editColumn('Numero_Caso', function($CasoUniversalWeb){
                 return "<a href='/admin/web/".$CasoUniversalWeb->Numero_Caso."'>$CasoUniversalWeb->Numero_Caso</a>";

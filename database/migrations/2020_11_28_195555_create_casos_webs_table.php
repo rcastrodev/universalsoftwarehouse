@@ -33,6 +33,7 @@ class CreateCasosWebsTable extends Migration
             $table->dateTime('FechaHora_Creacion');
             $table->string('SuspendeServ', 2)->nullable();
             $table->string('DescripcionSeveridad', 20)->nullable();
+            $table->string('NumeroUSHP', 6)->nullable();
             $table->dateTime('FechaHora_Cerrado')->nullable();
             $table->integer('Activo')->nullable();
             $table->integer('Prioridad')->nullable();

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('actualizar-casos', 'AdminController@actualizarCasos');
 Auth::routes();
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function(){
